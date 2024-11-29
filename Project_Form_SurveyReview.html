@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!--
+      New Perspectives on HTML5 and CSS3, 8th Edition
+      Tutorial 7
+      Tutorial Case
+
+      Red Ball Pizza Survey Form
+      Author: 
+      Date:   
+
+      Filename:   rb_survey.html
+
+   -->
+   
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <title>Review</title>
+   <link href="project_form_reset.css" rel="stylesheet" />
+   <link href="project_form_styles.css" rel="stylesheet" />
+   <link href="project_forms.css" rel="stylesheet"/>
+   
+	<script src="project_formsubmit.js"></script> <!----------------------------***********link to javascript--------->
+</head>
+
+<body>
+   <header>
+      <img src="Project_bakery_img_large.jpg" alt="Filipino Bakery" id="logoimg" />
+      <nav class="horizontalNavigation"> <a id="navicon" href="#"><img src="rb_navicon.png" alt="" /></a>
+         <ul>
+            <li><a href="project_test_home.html">Home</a></li>
+            <li><a href="Project_menu.html">Menu</a></li>
+            <li><a href="Project_locations.html">Our Locations</a></li>
+            <li><a href="Project_Form_SurveyReview.html">Reviews/Survey</a></li>
+            <li><a href="Project_Form.html">Contact Us</a></li>
+         </ul>
+      </nav>
+   </header>
+   <section>
+      <h1>Hello!</h1>
+      <p> Please consider leaving us a review! </p>
+      
+      <p>Required values are marked by an asterisk (*)</p>
+	  
+	  <form id="survey" action = "http://example.com/redball/survey" method="post"> <!-----------------------------------------------------------------------------------------------------------INSERT FORM --------->
+		<fieldset id ="expInfo">
+			<legend>Share Your Experiences at Filipino Bakery</legend>
+			
+			<div class="formRow">
+				<label for ="name">Name*</label>
+				<input name="custName" id="name" type="text" placeholder="first and last name" required /> <!------------------ Required ------->
+			</div>
+			
+			<div class="formRow">
+				<label for="mail">E-mail*</label>
+				<input name="custEmail" id="mail" type="email" required />
+			</div>
+			
+			
+			<!---------------------------------**********************************************CHECKBOX----------->	
+			<input name="mailMe" id="mailCB" value="yes" type="checkbox" />
+			<label for="mailCB"> Add me to your mailing list for great coupons and specials! </label>
+			
+			<!------------ range slider _________-------------------------------------------------------------->
+			<div class="formRow>
+				<label for="rangeBox> Rate the overall service <br />
+					(0=poor; 10=great) </label>
+				0
+				<input name="serviceRate" id="rangeBox" type="range" value="5" step=1" min="0" max="10" />	
+				10
+			</div>
+			
+			<!---------------------Text Area Box-------------------------------------------------->
+			<label for="commBox"> Tell us more about your experience! </label>
+			<textarea name="custExp" id="commBox"> </textarea>
+		
+		</fieldset>
+		
+		<!-------------------------------------SUBMIT and RESET BUTTON --------------------------->
+		<div id="buttons">
+			<input type="submit" value="Submit" />
+			<input type="reset" value="Cancel" />
+		</div>
+		
+	  </form>
+
+    </section> 
+   
+   <section>
+   <article>
+     <h1>Reviews</h1>
+	<blockquote>
+	 	<p>As a Filipino living abroad, finding a bakery that brings me back home is a dream come true! 
+		This bakery offers all my favorite pastries, from the sweet, soft pandesal to the decadent ensaymada.
+		Their bibingka is also a must-try — it’s just like how my grandmother used to make it! 
+		The flavors are so authentic, and you can taste the love in every bite. 
+		The staff is always friendly and the bakery is always clean and welcoming. 
+		Highly recommend it to anyone craving Filipino comfort food!
+		</p>
+		<p>Carolina Traveler</p>
+	</blockquote>
+	
+	<blockquote>
+	 	<p>I’ve been coming here for months now and I can honestly say this is the best Filipino bakery in the area. The pandesal is perfect — light, fluffy, and just the right amount of sweetness. The leche flan is another favorite; it’s creamy and not too sweet, which is just how I like it. They also have a great selection of traditional Filipino cakes like ube and mango float. If you're new to Filipino desserts, this is the place to start!
+		</p>
+		<p>Mikey of Jacksonville</p>
+	</blockquote>
+	
+	<blockquote>
+	 	<p>I can’t get enough of this bakery! Every time I stop by, they have fresh, warm pandesal right out of the oven. It’s the best way to start the day. The variety of Filipino pastries they offer is amazing, from crispy lumpia to rich and velvety ube halaya. The customer service is always friendly and helpful. Whether you're looking for a snack or catering for a special event, this place never disappoints.
+		</p>
+		<p>Canada Traveler</p>
+	</blockquote>
+	
+	
+	</article>
+	</section>
+	
+	
+   <footer>
+     
+   </footer>
+</body>
+</html>

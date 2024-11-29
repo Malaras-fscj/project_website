@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!--
+      
+      Author: Maricel Alaras
+      Date:   
+
+      Filename:   Project_Form.html
+
+   -->
+   
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <title>Contact Us</title>
+   <link href="project_form_reset.css" rel="stylesheet" />
+   <link href="project_form_styles.css" rel="stylesheet" />
+   <link href="project_forms.css" rel="stylesheet"/>
+   
+	<script src="project_formsubmit.js"></script> <!----------------------------***********link to javascript--------->
+</head>
+
+<body>
+   <header>
+      <img src="Project_bakery_img_large.jpg" alt="Red Ball Pizza" id="logoimg" />
+      <nav class="horizontalNavigation"> <a id="navicon" href="#"><img src="rb_navicon.png" alt="" /></a>
+         <ul>
+            <li><a href="project_test_home.html">Home</a></li>
+            <li><a href="Project_menu.html">Menu</a></li>
+            <li><a href="Project_locations.html">Our Locations</a></li>
+            <li><a href="Project_Form_SurveyReview.html">Reviews/Survey</a></li>
+            <li><a href="Project_Form.html">Contact Us</a></li>
+         </ul>
+      </nav>
+   </header>
+   <section>
+      <h1>Contact Us</h1>
+      <p>Need to contact us? No problem! Please provide the following information, description and description of your inquiry.</p>
+      
+      <p>Required values are marked by an asterisk (*)</p>
+	  
+	  <form id="survey" action = "http://example.com/redball/survey" method="post"> <!-----------------------------------------------------------------------------------------------------------INSERT FORM --------->
+		<fieldset id="custInfo">
+			<legend>Customer Information </legend>
+			
+			<div class="formRow">
+				<label for ="name">Name*</label>
+				<input name="custName" id="name" type="text" placeholder="first and last name" required /> <!------------------ Required ------->
+			</div>
+			
+			<div class="formRow">
+				<label for="street">Street address</label>
+				<input name="custStreet" id="street" type="text"/>
+			</div>
+			
+			<div class="formRow">
+				<label for="city">City</label>
+				<input name="custCity" id="city" type="text" value="Ormond Beach" />
+			</div>
+			
+			<div class="formRow">
+				<label for="state">State</label>
+				<input name="custState" id="state" type="text" value="FL"/>
+			</div>
+			
+			<div class="formRow">
+				<label for="zip">Postal code</label>
+				<input name="custZip" id="zip" type="text" placeholder="nnnnn (-nnnn)"
+						pattern="^\d{5}(-\d{4})?$"/>
+			</div>
+			
+			<div class="formRow">
+				<label for="phone">Phone number</label>
+				<input name="custPhone" id="phone" type="tel" placeholder="(nnn) nnn-nnnn"
+						pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$"/>
+			</div>
+			
+			<div class="formRow">
+				<label for="mail">E-mail*</label>
+				<input name="custEmail" id="mail" type="email" required />
+			</div>
+			
+				<!---------------------Text Area Box-------------------------------------------------->
+			
+			<br>
+			<label for="commBox"> Leave us a message and submit the form. We'll get back to you within 1 business day. </label>
+			<textarea name="custExp" id="commBox"> </textarea>
+			
+		</fieldset>
+		
+		
+		
+		<!-------------------------------------SUBMIT and RESET BUTTON --------------------------->
+		<div id="buttons">
+			<input type="submit" value="Submit" />
+			<input type="reset" value="Cancel" />
+		</div>
+		
+	  </form>
+
+     
+   </section>
+   <footer>
+    
+   </footer>
+  
+</body>
+</html>

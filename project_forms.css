@@ -1,0 +1,143 @@
+/*
+   New Perspectives on HTML5 and CSS3, 8th Edition
+   Tutorial 7
+   Tutorial Case
+
+   Survey Forms Style Sheet
+   Author: 
+   Date:   
+
+   Filename:         rb_forms.css
+
+*/
+
+/* Form Layout Styles */
+
+form#survey {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+form#survey > fieldset {
+	background-color: rgb(0, 37, 51); /*rgb(241,232,181); */
+	color: white;
+	border-radius: 20px;
+	flex: 1 1 300px;
+	font-size: 0.85em;
+	padding: 10px;
+	margin:10px;
+}
+
+
+div.formRow{
+	display: flex;
+	flex-flow: row wrap;
+	margin: 7px 0px;
+}
+
+div.formRow > * {
+	flex: 1 1 150px;
+}
+
+/* Legend Styles */
+
+legend{
+	background-color: rgb(116, 37, 77); /*rgb(179,20,25); */
+	color: white;
+	padding: 5px;
+}
+
+/* Text Area Styles */
+textarea {
+	margin-top: 10px;
+	height: 100px;
+	width: 95%;
+}
+
+
+/* Spinner Styles */
+div.formRow > input#dineSpin {
+		flex: 0 0 50px;
+}
+
+
+/* Form Button Styles */
+div#buttons {
+	text-align: center;
+	width: 100%;
+}
+
+input[type='submit'], input[type='reset'] {
+	font-size: 1.2em;
+	padding: 5px;
+	margin: 15px;
+}
+
+/* Validation Styles */
+
+input:focus, select:focus, textarea:focus{
+	background-color: rgb(220,255,220);
+}
+input#name:focus:valid,
+input#zip:focus:valid,
+input#phone:focus:valid,
+input#mail:focus:valid {
+	background: rgb(220,255,220) url(rb_valid.png) bottom right/contain no-repeat;
+}
+
+input#name:focus:invalid,
+input#zip:focus:invalid,
+input#hone:focus:invalid,
+input#mail:focus:invalid {
+	background: rgb(255,232,233) urgl(rb_invalid.png) bottom right/contain no-repeat;
+}
+
+/* block quotes*/
+/*
+article {
+	width: 73%;
+	float: left;
+	font-size: 0.8em;
+	text-align: justify;
+}
+*/
+
+body article h1 {
+	font-size: 1.15em;
+}
+
+blockquote {
+  background: rgb(241, 241, 241);
+  border-left: 10px solid rgba(176,124,48,0.5);
+  quotes: "\201C""\201D""\201C""\2019";
+  	border-radius: 20%;
+	width: 40%;
+	margin: 1%;
+	float: left;
+	padding: 2%;
+}
+blockquote p:first-of-type:before {
+  color: rgba(176,124,48,0.50);
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin: 0.2em 0.1em 0em 0.25em;
+  vertical-align: -0.4em;
+  float: left;
+}
+blockquote {
+	font-size: 1em;
+	width: 100%;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+	margin: 0 0 4% 0;
+}
+blockquote p:last-of-type {
+	border-top: 1px solid rgba(128,98,26,1.00);
+	text-align: right;
+	font-size: 1em;
+}
+
+q {quotes: "\201C" "\201D" "\2018" "\2019";}
+q:before {content:open-quote;}
+q:after {content:close-quote;}
+article p, article address {font-family: "Times New Roman", Times, serif;}
